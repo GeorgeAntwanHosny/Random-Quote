@@ -21,4 +21,4 @@
 
 - #### The page should be responsive on different screen sizes.
 
-- #### Deploy the solution and submit Repository URL and Demo URL.
+- #### Deploy the solution and submit [Demo URL](https://random-quote-sigma.vercel.app/).
