@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+$color_1:#6466E9;
+$color_2:#111729;
+$color_3:#20293A;
+$color_4:#4A5567;
+$color_5:#97A3B6;
+
+@mixin Outfit-font($weight:200){
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:$weight;
+    font-style: normal;
+}
+body{
+    background-color:$color_2;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.card{
+    width: 500px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: $color_3;
+    background-image: url('./images/bg-image-random-quote.svg');
+    background-repeat: no-repeat;
+    background-size: 500px 260px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 48px 40px 100px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 20px;
+    &> p:first-child{
+        color: white;
+        @include Outfit-font(800);
+    }
+    div{
+        display: grid;
+        grid-auto-flow: column;
+        gap:12px;
+        button{
+            border:1px solid $color_1;
+            border-radius: 25px;
+            padding: 5px 15px;
+            @include Outfit-font(400);
+            font-size: 12px;
+            color:$color_1;
+            background-color: $color_3;
+            cursor: pointer;
+        }
+    }
+    &>p:last-child{
+        color:$color_5;
+        @include Outfit-font(400);
+        font-size: 22px;
+        text-align: center;
+        padding: 0px 25px;
+    }
+    
+}
+.random-link-container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+
+    &>div{
+      border: 1px solid $color_4;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    &>div:first-child{
+        border-radius: 10px 0px 0px 10px;
+    }
+    &>div:last-child{
+        border-radius: 0px 10px 10px 0px;
+    }
+}
